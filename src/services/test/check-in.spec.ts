@@ -25,7 +25,7 @@ describe('Check-in Service', () => {
       longitude: 0,
     })
 
-    vi.isFakeTimers()
+    vi.useFakeTimers()
   })
 
   afterEach(() => {
