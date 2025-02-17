@@ -9,10 +9,10 @@ GymPass stryle app.
 - [x] Deve ser possível obter o perfil de um usuário logado 
 - [x] Deve ser possível obter o numero de check-ins realizados pelo usuário logado 
 - [x] Deve ser possível o usuário obter seu historico de check-ins
-- [ ] Deve ser possível o usuário buscar academias próximas 
+- [x] Deve ser possível o usuário buscar academias próximas 
 - [x] Deve ser possível o usuário buscar uma academia pelo nome;
 - [x] Deve ser possível o usuário realizar check-in em uma academia
-- [ ] Deve ser possível validar o check-in de um usuario 
+- [x] Deve ser possível validar o check-in de um usuario 
 - [x] Deve ser possível cadastrar uma academia 
 
 ## RNs (Regras de negócio)
@@ -20,6 +20,7 @@ GymPass stryle app.
 - [x] O usuario nao deve se cadastrar com um email duplicado
 - [x] O usuário nao pode fazer o 2 check-ins no mesmo dia;
 - [x] O usuário não pode fazer check-in se nao estiver proxima(100m) da academia 
+- [x] O check-in so pode ser validado até 20 minutos após criado
 - [ ] O check-in só pode ser validado por administradores 
 - [ ] A academia só pode ser cadastrada por administrador 
 
