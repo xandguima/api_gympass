@@ -20,6 +20,7 @@ export class AuthenticateService {
     password,
   }: AutenticateServiceRequest): Promise<AutenticateServiceResponse> {
     const user = await this.userRepository.findByEmail(email)
+
     if (!user) {
       throw new InvalidCredencialsError()
     }
