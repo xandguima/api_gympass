@@ -4,9 +4,9 @@ import { z } from 'zod'
 
 export async function validated(request: FastifyRequest, reply: FastifyReply) {
   const validatedCheckInParamsSchema = z.object({
-    checkInId: z.string(),
+    checkInId: z.string().uuid(),
   })
-  const { checkInId } = validatedCheckInParamsSchema.parse(request.query)
+  const { checkInId } = validatedCheckInParamsSchema.parse(request.params)
 
   const validateCheckInService = makeValidateCheckInService()
   await validateCheckInService.execute({
