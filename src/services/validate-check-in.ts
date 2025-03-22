@@ -28,8 +28,9 @@ export class ValidateCheckInsService {
       checkIn.created_at,
       'minutes',
     )
+    const timeForValidation = 20
 
-    if (distanceInMinutesFromCheckInCreation > 20) {
+    if (distanceInMinutesFromCheckInCreation > timeForValidation) {
       throw new LateCheckInValidateError()
     }
 
