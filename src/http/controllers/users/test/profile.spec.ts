@@ -17,7 +17,6 @@ describe('Profile (e2e)', () => {
       .get('/me')
       .set('Authorization', `Bearer ${token}`)
       .send()
-    console.log(typeof authResponse.body.user.created_at)
     expect(authResponse.statusCode).toEqual(200)
     expect(authResponse.body.user).toEqual(
       expect.objectContaining({ email: 'johndoe@example.com' }),
