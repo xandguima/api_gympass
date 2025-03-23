@@ -31,6 +31,9 @@ app.setErrorHandler((error, _, reply) => {
       .status(400)
       .send({ messege: 'Validation error', issues: error.format() })
   }
+  if (error.code === 'FST_ERR_CTP_EMPTY_JSON_BODY') {
+    return reply.status(400).send({ message: 'Request body cannot be empty' })
+  }
   if (env.NODE_ENV !== 'production') {
     console.log(error)
   }
