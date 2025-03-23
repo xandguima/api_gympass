@@ -37,7 +37,6 @@ describe('Refresh token (e2e)', () => {
   })
   it('should return an error when no cookie is provided', async () => {
     const response = await request(app.server).patch('/token/refresh').send()
-    console.log(response.body)
     expect(response.statusCode).not.toEqual(200)
     expect(response.body).toHaveProperty('messege', 'Unauthorized')
   })
