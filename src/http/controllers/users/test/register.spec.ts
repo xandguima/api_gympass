@@ -19,4 +19,3 @@ describe('Register user (e2e)', () => {
     expect(response.statusCode).toEqual(201)
   })
 })
-
